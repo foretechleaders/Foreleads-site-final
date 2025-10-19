@@ -3,10 +3,9 @@
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "20.11.1"
+  NODE_VERSION = "20.10.0"   # ✅ Supported by Netlify
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
