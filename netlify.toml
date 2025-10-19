@@ -1,12 +1,11 @@
 [build]
-  command   = "npm run build"
-  publish   = "dist"
+  command = "npm run build"
+  publish = "dist"
 
 [build.environment]
-  # Use a valid Node.js major version supported by Netlify
-  NODE_VERSION = "18"
+  NODE_VERSION = "18.17.1"   # ✅ Supported by Netlify (LTS)
 
 [[redirects]]
   from = "/*"
-  to   = "/index.html"
+  to = "/index.html"
   status = 200
