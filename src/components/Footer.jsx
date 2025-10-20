@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaYoutube, FaEnvelope } from 'react-icons/fa'
+import { FaYoutube, FaEnvelope, FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -22,15 +22,51 @@ export default function Footer() {
 
         <div className="flex gap-4 justify-end">
           <a
+            href="https://www.instagram.com/foreleads_leadership/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-navy"
+            aria-label="Instagram"
+            title="Instagram"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61582426252186"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-navy"
+            aria-label="Facebook"
+            title="Facebook"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/109255618/admin/dashboard/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-navy"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+          >
+            <FaLinkedin />
+          </a>
+          <a
             href="https://www.youtube.com/@ForeleadsLeadershipConsulting"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-navy"
             aria-label="YouTube"
+            title="YouTube"
           >
             <FaYoutube />
           </a>
-          <a href="mailto:info@foreleadsleadership.com" className="hover:text-navy" aria-label="Email">
+          <a
+            href="mailto:foretechleaders@gmail.com"
+            className="hover:text-navy"
+            aria-label="Email"
+            title="Email"
+          >
             <FaEnvelope />
           </a>
         </div>
