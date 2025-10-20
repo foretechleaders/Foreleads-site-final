@@ -33,7 +33,7 @@ export default function Contact() {
           <div className="card p-5">
             <h3 className="font-semibold">Contact</h3>
             <div className="text-sm text-slate-700 mt-2">
-              <div>Email: <a className="text-navy font-semibold" href="mailto:info@foreleadsleadership.com">info@foreleadsleadership.com</a></div>
+              <div>Email: <a className="text-navy font-semibold" href="mailto:foretechleaders@gmail.com">foretechleaders@gmail.com</a></div>
               <div>LinkedIn: <a className="text-navy font-semibold" href="https://www.linkedin.com/company/109255618" target="_blank" rel="noopener noreferrer">Company Page</a></div>
               <div>Phone: (optional business line)</div>
             </div>
@@ -43,7 +43,7 @@ export default function Contact() {
             <h3 className="font-semibold">Social</h3>
             <div className="text-sm text-slate-700 mt-2 space-y-1">
               <div><a className="text-navy font-semibold" href="https://www.youtube.com/@ForeleadsLeadershipConsulting" target="_blank" rel="noopener noreferrer">YouTube</a></div>
-              <div><a className="text-navy font-semibold" href="mailto:info@foreleadsleadership.com">Email Us</a></div>
+              <div><a className="text-navy font-semibold" href="mailto:mailto:foretechleaders@gmail.com">Email Us</a></div>
             </div>
           </div>
         </aside>
