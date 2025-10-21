@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { FaYoutube, FaInstagram, FaFacebook, FaBars, FaTimes } from 'react-icons/fa'
+import { FaYoutube, FaInstagram, FaFacebook, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa'
 import logo from '/Leadership Consulting LLC.png'
 
 export default function Header() {
@@ -12,7 +12,7 @@ export default function Header() {
       <div className="container flex items-center justify-between py-4">
         {/* Logo + Title */}
         <Link to="/" className="flex items-center gap-3" aria-label="Go to homepage">
-          <img src={logo} alt="Foreleads logo" className="h-10 w-auto" />
+          <img src={logo} alt="Foreleads Leadership logo" className="h-10 w-auto" />
           <div className="leading-tight">
             <div className="text-xl font-bold text-navy">Foreleads</div>
             <div className="text-xs text-slate-600">Leadership Consulting LLC</div>
@@ -21,32 +21,42 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm">
-          <NavLink to="/" className={({isActive}) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>Home</NavLink>
-          <NavLink to="/about" className={({isActive}) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>About</NavLink>
-          <NavLink to="/services" className={({isActive}) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>Services</NavLink>
-          <NavLink to="/programs" className={({isActive}) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>Programs</NavLink>
-          <NavLink to="/resources" className={({isActive}) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>Resources</NavLink>
-          <NavLink to="/contact" className={({isActive}) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>Contact</NavLink>
+          <NavLink to="/" className={({ isActive }) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>Home</NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>About</NavLink>
+          <NavLink to="/services" className={({ isActive }) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>Services</NavLink>
+          <NavLink to="/programs" className={({ isActive }) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>Programs</NavLink>
+          <NavLink to="/resources" className={({ isActive }) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>Resources</NavLink>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-navy font-semibold' : 'hover:text-navy'}>Contact</NavLink>
 
           {/* Social Icons */}
-          <a href="https://www.instagram.com/foreleads_leadership/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-navy">
+          <a href="https://www.linkedin.com/company/foreleads-leadership-consulting-llc/"
+             target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+             title="Follow us on LinkedIn" className="hover:text-navy">
+            <FaLinkedin size={18} />
+          </a>
+          <a href="https://www.instagram.com/foreleads_leadership/"
+             target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+             title="Follow us on Instagram" className="hover:text-navy">
             <FaInstagram size={18} />
           </a>
-          <a href="https://www.facebook.com/profile.php?id=61582426252186" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-navy">
+          <a href="https://www.facebook.com/profile.php?id=61582426252186"
+             target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+             title="Follow us on Facebook" className="hover:text-navy">
             <FaFacebook size={18} />
           </a>
-          <a href="https://www.youtube.com/@ForeleadsLeadershipConsulting" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-navy">
+          <a href="https://www.youtube.com/@ForeleadsLeadershipConsulting"
+             target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+             title="Watch our YouTube Channel" className="hover:text-navy">
             <FaYoutube size={18} />
           </a>
         </nav>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu */}
         <button onClick={toggleMenu} className="md:hidden text-navy focus:outline-none">
           {isMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-slate-200">
           <div className="flex flex-col items-center gap-4 py-6 text-sm">
@@ -58,15 +68,10 @@ export default function Header() {
             <NavLink to="/contact" onClick={toggleMenu} className="hover:text-navy">Contact</NavLink>
 
             <div className="flex gap-6 pt-2 text-navy">
-              <a href="https://www.instagram.com/foreleads_leadership/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <FaInstagram size={20} />
-              </a>
-              <a href="https://www.facebook.com/profile.php?id=61582426252186" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <FaFacebook size={20} />
-              </a>
-              <a href="https://www.youtube.com/@ForeleadsLeadershipConsulting" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <FaYoutube size={20} />
-              </a>
+              <a href="https://www.linkedin.com/company/foreleads-leadership-consulting-llc/" title="LinkedIn" target="_blank" rel="noopener noreferrer"><FaLinkedin size={20} /></a>
+              <a href="https://www.instagram.com/foreleads_leadership/" title="Instagram" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} /></a>
+              <a href="https://www.facebook.com/profile.php?id=61582426252186" title="Facebook" target="_blank" rel="noopener noreferrer"><FaFacebook size={20} /></a>
+              <a href="https://www.youtube.com/@ForeleadsLeadershipConsulting" title="YouTube" target="_blank" rel="noopener noreferrer"><FaYoutube size={20} /></a>
             </div>
           </div>
         </div>
