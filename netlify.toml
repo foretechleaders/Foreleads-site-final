@@ -7,18 +7,9 @@
 
 [build.environment]
   NODE_VERSION = "18.16.0"
-  NPM_VERSION = "9.6.7"
 
 # Redirect all routes to index.html for React Router
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Optional: enable more verbose logging during builds (for debugging)
-[build.processing]
-  skip_processing = false
-
-# Optional: cache node_modules between builds for faster deploys
-[build.cache]
-  paths = ["node_modules/**"]
