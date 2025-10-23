@@ -14,6 +14,12 @@ export default function LeadershipArticles() {
         'Research insights on how public sector leaders drive innovation and manage change effectively.',
       file: '/whitepapers/Leading_Change_in_Government_Technology.pdf',
     },
+    {
+      title: 'The IT Leadership Edge: Building Resilience and Influence in Technical Environments',
+      description:
+        'A guide for IT leaders seeking to strengthen influence, drive innovation, and build resilient, high-performing teams.',
+      file: '/whitepapers/The_IT_Leadership_Edge.pdf',
+    },
   ]
 
   return (
