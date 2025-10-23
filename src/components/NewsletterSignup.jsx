@@ -4,30 +4,28 @@ export default function NewsletterSignup() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('')
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     setStatus('loading')
 
-    try {
-      const response = await fetch('https://gmail.us22.list-manage.com/subscribe/post-json?u=abcd1234efgh5678&id=9012klmn34&c=?', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ EMAIL: email }),
-      })
+    // ✅ Replace with your actual Mailchimp list URL
+    const mailchimpUrl =
+      'https://gmail.us22.list-manage.com/subscribe/post-json?u=abcd1234efgh5678&id=9012klmn34&c=?'
+        .replace('?', '') + `&EMAIL=${encodeURIComponent(email)}&c=callback`
 
-      if (response.ok) {
+    const script = document.createElement('script')
+    script.src = mailchimpUrl
+
+    window.callback = (data) => {
+      if (data.result === 'success') {
         setStatus('success')
         setEmail('')
       } else {
         setStatus('error')
       }
-    } catch (error) {
-      console.error('Subscription failed:', error)
-      setStatus('error')
     }
+
+    document.body.appendChild(script)
   }
 
   return (
