@@ -4,21 +4,20 @@ import { FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa'
 export default function Contact() {
   const [status, setStatus] = useState('')
 
+  // --- Proper Netlify form encoding ---
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const formData = new FormData(e.target)
+    const form = e.target
+    const formData = new FormData(form)
 
     try {
-      const response = await fetch('/', {
+      await fetch('/', {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
       })
-      if (response.ok) {
-        setStatus('success')
-        e.target.reset()
-      } else {
-        setStatus('error')
-      }
+      setStatus('success')
+      form.reset()
     } catch (error) {
       console.error('Form submission error:', error)
       setStatus('error')
@@ -36,15 +35,23 @@ export default function Contact() {
         </p>
 
         <div className="grid md:grid-cols-2 gap-10">
-          {/* Contact Form */}
+          {/* --- Contact Form --- */}
           <form
             name="contact"
             method="POST"
             data-netlify="true"
+            netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="space-y-4"
           >
+            {/* Hidden form name for Netlify */}
             <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden">
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
+
             <div>
               <label className="block text-left font-semibold mb-1">Name</label>
               <input
@@ -54,6 +61,7 @@ export default function Contact() {
                 className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-navy"
               />
             </div>
+
             <div>
               <label className="block text-left font-semibold mb-1">Organization</label>
               <input
@@ -62,6 +70,7 @@ export default function Contact() {
                 className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-navy"
               />
             </div>
+
             <div>
               <label className="block text-left font-semibold mb-1">Email</label>
               <input
@@ -71,6 +80,7 @@ export default function Contact() {
                 className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-navy"
               />
             </div>
+
             <div>
               <label className="block text-left font-semibold mb-1">Message</label>
               <textarea
@@ -80,6 +90,7 @@ export default function Contact() {
                 className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-navy"
               ></textarea>
             </div>
+
             <button
               type="submit"
               className="bg-navy text-white font-semibold px-6 py-2 rounded-md hover:bg-navy/90 transition"
@@ -99,7 +110,7 @@ export default function Contact() {
             )}
           </form>
 
-          {/* Contact Info Sidebar */}
+          {/* --- Contact Sidebar --- */}
           <div className="space-y-6 text-left">
             <h2 className="text-2xl font-bold text-navy mb-4">Contact Information</h2>
             <p>
