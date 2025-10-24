@@ -4,7 +4,6 @@ import { FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa'
 export default function Contact() {
   const [status, setStatus] = useState('')
 
-  // --- Proper Netlify form encoding ---
   const handleSubmit = async (e) => {
     e.preventDefault()
     const form = e.target
@@ -35,7 +34,7 @@ export default function Contact() {
         </p>
 
         <div className="grid md:grid-cols-2 gap-10">
-          {/* --- Contact Form --- */}
+          {/* Contact Form */}
           <form
             name="contact"
             method="POST"
@@ -44,7 +43,6 @@ export default function Contact() {
             onSubmit={handleSubmit}
             className="space-y-4"
           >
-            {/* Hidden form name for Netlify */}
             <input type="hidden" name="form-name" value="contact" />
             <p className="hidden">
               <label>
@@ -110,7 +108,7 @@ export default function Contact() {
             )}
           </form>
 
-          {/* --- Contact Sidebar --- */}
+          {/* Sidebar */}
           <div className="space-y-6 text-left">
             <h2 className="text-2xl font-bold text-navy mb-4">Contact Information</h2>
             <p>
