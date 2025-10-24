@@ -1,45 +1,47 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { FaLinkedin, FaInstagram, FaFacebook, FaYoutube, FaEnvelope } from 'react-icons/fa'
+import { FaLinkedin, FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 py-8 mt-12 bg-white">
-      <div className="container grid md:grid-cols-3 gap-6 items-center">
-        <div className="text-sm text-slate-600">
-          © {new Date().getFullYear()} Foreleads Leadership Consulting LLC
-          <div className="text-slate-500">Empowering Leadership. Enabling Growth.</div>
+    <footer className="bg-white text-gray-800 border-t border-gray-200 py-6">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="text-center md:text-left mb-4 md:mb-0">
+          <p className="font-semibold text-navy">
+            © {new Date().getFullYear()} Foreleads Leadership Consulting LLC
+          </p>
+          <p className="text-sm text-gray-600">Empowering Leadership. Enabling Growth.</p>
         </div>
 
-        <nav className="flex flex-wrap gap-4 justify-center text-sm">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/programs">Programs</Link>
-          <Link to="/resources">Resources</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
-
-        <div className="flex gap-5 justify-end text-slate-700">
-          <a href="https://www.linkedin.com/company/foreleads-leadership-consulting-llc/"
-             target="_blank" rel="noopener noreferrer" title="Follow us on LinkedIn" aria-label="LinkedIn" className="hover:text-navy">
-            <FaLinkedin size={20} />
+        <div className="flex space-x-4 text-2xl">
+          <a
+            href="https://www.linkedin.com/company/foreleads-leadership-consulting-llc/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-navy hover:text-navy/70"
+          >
+            <FaLinkedin />
           </a>
-          <a href="https://www.instagram.com/foreleads_leadership/"
-             target="_blank" rel="noopener noreferrer" title="Follow us on Instagram" aria-label="Instagram" className="hover:text-navy">
-            <FaInstagram size={20} />
+          <a
+            href="https://www.facebook.com/profile.php?id=61582426252186"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-navy hover:text-navy/70"
+          >
+            <FaFacebook />
           </a>
-          <a href="https://www.facebook.com/profile.php?id=61582426252186"
-             target="_blank" rel="noopener noreferrer" title="Follow us on Facebook" aria-label="Facebook" className="hover:text-navy">
-            <FaFacebook size={20} />
+          <a
+            href="https://www.instagram.com/foreleads_leadership/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-navy hover:text-navy/70"
+          >
+            <FaInstagram />
           </a>
-          <a href="https://www.youtube.com/@ForeleadsLeadershipConsulting"
-             target="_blank" rel="noopener noreferrer" title="Watch our YouTube Channel" aria-label="YouTube" className="hover:text-navy">
-            <FaYoutube size={20} />
-          </a>
-          <a href="mailto:aforeman@foreleadsleadership.com"
-             title="Email Foreleads Leadership Consulting" aria-label="Email" className="hover:text-navy">
-            <FaEnvelope size={20} />
+          <a
+            href="mailto:aforeman@foreleadsleadership.com"
+            className="text-navy hover:text-navy/70"
+          >
+            <FaEnvelope />
           </a>
         </div>
       </div>
