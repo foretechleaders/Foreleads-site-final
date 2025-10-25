@@ -1,94 +1,40 @@
-import React, { useState } from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import NewsletterSignup from "../components/NewsletterSignup";
 
-export default function Resources() {
-  const [email, setEmail] = useState('')
-  const [status, setStatus] = useState('')
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setStatus('loading')
-
-    try {
-      const response = await fetch(
-        'https://gmail.us22.list-manage.com/subscribe/post-json?u=abcd1234efgh5678&id=9012klmn34&c=?',
-        {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ EMAIL: email }),
-        }
-      )
-
-      if (response.ok) {
-        setStatus('success')
-        setEmail('')
-      } else {
-        setStatus('error')
-      }
-    } catch (error) {
-      console.error('Subscription failed:', error)
-      setStatus('error')
-    }
-  }
-
+const Resources = () => {
   return (
-    <section className="py-16 bg-white text-gray-800">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        {/* ---------- HEADER ---------- */}
-        <h1 className="text-3xl font-bold text-navy mb-4">Resources</h1>
-        <p className="text-gray-600 mb-10">
-          Leadership Articles, Whitepapers, and Tools to enhance your leadership journey.
+    <div className="bg-white text-gray-800 pt-24 pb-16 min-h-screen flex flex-col items-center justify-start">
+      {/* Page Title */}
+      <header className="text-center mb-10">
+        <h1 className="text-4xl font-bold text-navy mb-4">Resources</h1>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Explore tools, insights, and research to strengthen your leadership journey.
         </p>
+      </header>
 
-        {/* ---------- ARTICLES & WHITEPAPERS ---------- */}
-        <div className="text-center mb-16">
-          <a
-            href="/resources/articles"
-            className="inline-block bg-navy text-white px-6 py-3 rounded-md hover:bg-navy/90 transition"
-          >
-            Discover Leadership Articles & Whitepapers
-          </a>
-        </div>
+      {/* Leadership Articles Section */}
+      <section className="w-full max-w-4xl bg-gray-50 rounded-2xl shadow-md p-8 mb-10 text-center">
+        <h2 className="text-2xl font-semibold text-navy mb-3">
+          Leadership Articles & Whitepapers
+        </h2>
+        <p className="text-gray-600 mb-6">
+          Downloadable guides and research to support your leadership journey.
+        </p>
+        <Link
+          to="/leadership-articles"
+          className="inline-block bg-navy text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 transition"
+        >
+          Discover
+        </Link>
+      </section>
 
-        {/* ---------- NEWSLETTER SIGNUP ---------- */}
-        <div className="max-w-md mx-auto text-center">
-          <h2 className="text-2xl font-bold text-navy mb-3">
-            The Leadership Edge Digest
-          </h2>
-          <p className="text-gray-600 mb-6">
-            Quarterly insights and tools for leadership excellence. Subscribe below.
-          </p>
+      {/* Newsletter Signup Section */}
+      <section className="w-full max-w-4xl bg-gray-50 rounded-2xl shadow-md p-8">
+        <NewsletterSignup />
+      </section>
+    </div>
+  );
+};
 
-          <form onSubmit={handleSubmit} className="flex flex-col items-center space-y-4">
-            <input
-              type="email"
-              name="EMAIL"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address"
-              required
-              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-navy"
-            />
-            <button
-              type="submit"
-              className="bg-navy text-white font-semibold px-6 py-2 rounded-md hover:bg-navy/90 transition"
-            >
-              {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
-            </button>
-          </form>
-
-          {status === 'success' && (
-            <p className="text-green-600 mt-4">
-              ✅ Thank you for subscribing! Please check your email to confirm.
-            </p>
-          )}
-          {status === 'error' && (
-            <p className="text-red-600 mt-4">
-              ❌ Oops! Something went wrong. Please try again later.
-            </p>
-          )}
-        </div>
-      </div>
-    </section>
-  )
-}
+export default Resources;
