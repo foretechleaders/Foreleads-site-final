@@ -1,72 +1,106 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-export default function NewsletterSignup() {
-  const [email, setEmail] = useState('')
-  const [status, setStatus] = useState('')
+const NewsletterSignup = () => {
+  const [status, setStatus] = useState("");
+  const [formData, setFormData] = useState({
+    EMAIL: "",
+    FNAME: "",
+    LNAME: "",
+    COMPANY: "",
+    MMERGE5: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setStatus('loading')
-
-    // ✅ Replace with your actual Mailchimp list URL
+    e.preventDefault();
     const mailchimpUrl =
-      'https://gmail.us22.list-manage.com/subscribe/post-json?u=abcd1234efgh5678&id=9012klmn34&c=?'
-        .replace('?', '') + `&EMAIL=${encodeURIComponent(email)}&c=callback`
+      "https://foreleadsleadership.us15.list-manage.com/subscribe/post?u=3e6a994e76c3d38dbaca3d0b8&id=c5469b3bcd&f_id=00f5c2e1f0";
 
-    const script = document.createElement('script')
-    script.src = mailchimpUrl
-
-    window.callback = (data) => {
-      if (data.result === 'success') {
-        setStatus('success')
-        setEmail('')
-      } else {
-        setStatus('error')
-      }
-    }
-
-    document.body.appendChild(script)
-  }
+    const formBody = new URLSearchParams(formData).toString();
+    fetch(mailchimpUrl, {
+      method: "POST",
+      body: formBody,
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      mode: "no-cors",
+    })
+      .then(() => setStatus("✅ Thank you for subscribing!"))
+      .catch(() =>
+        setStatus("❌ Oops! Something went wrong. Please try again later.")
+      );
+  };
 
   return (
-    <section className="py-16 bg-white text-gray-800">
-      <div className="max-w-md mx-auto px-6 text-center">
-        <h2 className="text-2xl font-bold text-navy mb-3">
-          The Leadership Edge Digest
-        </h2>
-        <p className="text-gray-600 mb-6">
-          Quarterly insights and tools for leadership excellence. Subscribe below.
+    <section className="bg-white text-center py-12">
+      <h2 className="text-3xl font-semibold text-navy mb-2">
+        The Leadership Edge Digest
+      </h2>
+      <p className="text-gray-600 mb-6">
+        Quarterly insights and tools for leadership excellence.
+      </p>
+
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-md mx-auto bg-gray-50 p-6 rounded-2xl shadow"
+      >
+        <input
+          type="email"
+          name="EMAIL"
+          placeholder="Email Address *"
+          required
+          onChange={handleChange}
+          className="w-full mb-3 px-3 py-2 border border-gray-300 rounded"
+        />
+        <input
+          type="text"
+          name="FNAME"
+          placeholder="First Name"
+          onChange={handleChange}
+          className="w-full mb-3 px-3 py-2 border border-gray-300 rounded"
+        />
+        <input
+          type="text"
+          name="LNAME"
+          placeholder="Last Name"
+          onChange={handleChange}
+          className="w-full mb-3 px-3 py-2 border border-gray-300 rounded"
+        />
+        <input
+          type="text"
+          name="COMPANY"
+          placeholder="Company"
+          onChange={handleChange}
+          className="w-full mb-3 px-3 py-2 border border-gray-300 rounded"
+        />
+        <input
+          type="text"
+          name="MMERGE5"
+          placeholder="Company URL"
+          onChange={handleChange}
+          className="w-full mb-4 px-3 py-2 border border-gray-300 rounded"
+        />
+
+        <button
+          type="submit"
+          className="bg-navy text-white font-semibold px-6 py-2 rounded hover:bg-blue-900 transition"
+        >
+          Subscribe
+        </button>
+      </form>
+
+      {status && (
+        <p
+          className={`mt-4 text-sm font-medium ${
+            status.includes("✅") ? "text-green-600" : "text-red-600"
+          }`}
+        >
+          {status}
         </p>
-
-        <form onSubmit={handleSubmit} className="flex flex-col items-center space-y-4">
-          <input
-            type="email"
-            name="EMAIL"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email address"
-            required
-            className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-navy"
-          />
-          <button
-            type="submit"
-            className="bg-navy text-white font-semibold px-6 py-2 rounded-md hover:bg-navy/90 transition"
-          >
-            {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
-          </button>
-        </form>
-
-        {status === 'success' && (
-          <p className="text-green-600 mt-4">
-            ✅ Thank you for subscribing! Please check your email to confirm.
-          </p>
-        )}
-        {status === 'error' && (
-          <p className="text-red-600 mt-4">
-            ❌ Oops! Something went wrong. Please try again later.
-          </p>
-        )}
-      </div>
+      )}
     </section>
-  )
-}
+  );
+};
+
+export default NewsletterSignup;
