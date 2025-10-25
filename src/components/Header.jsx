@@ -1,66 +1,98 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { FaLinkedin, FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa'
-import logo from '/public/Leadership Consulting LLC.png'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function Header() {
+const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className="bg-white shadow-md fixed top-0 w-full z-50">
+    <header className="fixed top-0 left-0 w-full bg-white z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo + Title */}
-        <div className="flex items-center space-x-3">
-          <img src={logo} alt="Foreleads Logo" className="h-10 w-auto" />
-          <Link to="/" className="text-xl font-bold text-navy leading-tight">
-            Foreleads <br />
-            Leadership Consulting LLC
+        {/* Logo / Title */}
+        <div className="flex items-center space-x-2">
+          <img
+            src="/Leadership Consulting LLC.png"
+            alt="Foreleads Leadership Logo"
+            className="h-10 w-auto"
+          />
+          <Link
+            to="/"
+            className="text-2xl font-bold text-navy tracking-tight hover:text-blue-900 transition"
+          >
+            Foreleads Leadership Consulting LLC
           </Link>
         </div>
 
-        {/* Navigation */}
-        <nav className="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <Link to="/" className="hover:text-navy transition">Home</Link>
-          <Link to="/about" className="hover:text-navy transition">About</Link>
-          <Link to="/services" className="hover:text-navy transition">Services</Link>
-          <Link to="/programs" className="hover:text-navy transition">Programs</Link>
-          <Link to="/resources" className="hover:text-navy transition">Resources</Link>
-          <Link to="/contact" className="hover:text-navy transition">Contact</Link>
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex space-x-6 text-navy font-semibold">
+          <Link to="/" className="hover:text-blue-900 transition">
+            Home
+          </Link>
+          <Link to="/about" className="hover:text-blue-900 transition">
+            About
+          </Link>
+          <Link to="/services" className="hover:text-blue-900 transition">
+            Services
+          </Link>
+          <Link to="/resources" className="hover:text-blue-900 transition">
+            Resources
+          </Link>
+          <Link to="/contact" className="hover:text-blue-900 transition">
+            Contact
+          </Link>
         </nav>
 
-        {/* Icons */}
-        <div className="flex space-x-4 text-2xl text-navy">
-          <a
-            href="https://www.linkedin.com/company/foreleads-leadership-consulting-llc/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-navy/70"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61582426252186"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-navy/70"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            href="https://www.instagram.com/foreleads_leadership/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-navy/70"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="mailto:aforeman@foreleadsleadership.com"
-            className="hover:text-navy/70"
-            title="Email Foreleads Leadership Consulting"
-          >
-            <FaEnvelope />
-          </a>
-        </div>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-navy text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
+
+      {/* Mobile Dropdown */}
+      {menuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200 text-center py-4">
+          <Link
+            to="/"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-navy font-semibold"
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-navy font-semibold"
+          >
+            About
+          </Link>
+          <Link
+            to="/services"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-navy font-semibold"
+          >
+            Services
+          </Link>
+          <Link
+            to="/resources"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-navy font-semibold"
+          >
+            Resources
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-navy font-semibold"
+          >
+            Contact
+          </Link>
+        </div>
+      )}
     </header>
-  )
-}
+  );
+};
+
+export default Header;
