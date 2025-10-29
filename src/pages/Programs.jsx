@@ -1,75 +1,87 @@
-import React from 'react'
+import React from "react";
 
-export default function Programs() {
+const Programs = () => {
   return (
-    <div className="container py-10">
-      <h1 className="h1">Programs & Workshops</h1>
-      <p className="lead mt-2 max-w-3xl">
+    <div className="bg-white text-gray-800 pt-24 pb-16 min-h-screen flex flex-col items-center">
+      {/* Page Title */}
+      <h1 className="text-4xl font-bold text-navy mb-4">Programs & Workshops</h1>
+      <p className="text-lg text-gray-600 mb-10 max-w-2xl text-center">
         Short cohort-based programs and interactive workshops designed to accelerate leadership capability.
       </p>
 
-      <div className="grid md:grid-cols-3 gap-6 mt-8">
-        <div className="card p-6">
-          <h3 className="text-lg font-semibold text-navy">Leading Through Transformation™</h3>
-          <p className="text-sm text-slate-700 mt-1">6-week cohort</p>
-          <p className="mt-3 text-slate-700">
+      {/* Program List */}
+      <div className="max-w-4xl space-y-10">
+        {/* Leading Through Transformation */}
+        <div className="bg-gray-50 shadow-md rounded-xl p-6">
+          <h2 className="text-2xl font-semibold text-navy mb-2">
+            Leading Through Transformation™
+          </h2>
+          <p className="text-gray-700 mb-3">6-week cohort</p>
+          <p className="text-gray-600 mb-4">
             Develop practical change leadership skills to lead digital and organizational transformation.
           </p>
-          <a href="/contact" className="btn btn-primary mt-4">Enroll / Request Group →</a>
-        </div>
-
-        <div className="card p-6">
-          <h3 className="text-lg font-semibold text-navy">The IT Leadership Edge</h3>
-          <p className="text-sm text-slate-700 mt-1">4-week intensive</p>
-          <p className="mt-3 text-slate-700">
-            Strengthen technical leaders' ability to influence, communicate, and deliver strategic outcomes.
-          </p>
-          <a href="/contact" className="btn btn-primary mt-4">Enroll / Request Group →</a>
-        </div>
-
-        <div className="card p-6">
-          <h3 className="text-lg font-semibold text-navy">Government Executive Leadership Academy</h3>
-          <p className="text-sm text-slate-700 mt-1">Custom cohort</p>
-          <p className="mt-3 text-slate-700">
-            Tailored executive development programs for public sector leaders and managers.
-          </p>
-          <a href="/contact" className="btn btn-primary mt-4">Enroll / Request Group →</a>
-        </div>
-      </div>
-
-      <div className="mt-12 grid md:grid-cols-2 gap-6">
-        <div className="card p-0 overflow-hidden">
-          <div className="px-5 py-4">
-            <h3 className="font-semibold">Latest Insights</h3>
-            <p className="text-sm text-slate-600">Thought leadership videos from our YouTube channel.</p>
-          </div>
-          <iframe
-            className="w-full"
-            style={{ height: '360px' }}
-            src="https://www.youtube.com/embed?listType=user_uploads&list=UC1-u3BMPZFEjUX-NYmUjegA"
-            title="Foreleads Leadership Consulting YouTube Channel"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
           <a
-            href="https://www.youtube.com/@ForeleadsLeadershipConsulting"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-4 text-navy font-semibold hover:underline"
+            href="https://buy.stripe.com/aFaeVf2Np46065EgAxdQQ00"
+            className="inline-block bg-navy text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition"
           >
-            Visit our YouTube Channel →
+            Enroll / Request Group →
           </a>
         </div>
 
-        <div className="card p-6">
-          <h3 className="font-semibold text-navy">Request Custom Training</h3>
-          <p className="text-sm text-slate-700 mt-2">
-            Schedule a discovery call to tailor a cohort or program for your team.
+        {/* The IT Leadership Edge */}
+        <div className="bg-gray-50 shadow-md rounded-xl p-6">
+          <h2 className="text-2xl font-semibold text-navy mb-2">
+            The IT Leadership Edge
+          </h2>
+          <p className="text-gray-700 mb-3">4-week intensive</p>
+          <p className="text-gray-600 mb-4">
+            Strengthen technical leaders’ ability to influence, communicate, and deliver strategic outcomes.
           </p>
-          <a href="/contact" className="btn btn-outline mt-4">Request a Custom Proposal</a>
+          <a
+            href="https://buy.stripe.com/bJeaEZ4Vx6e8alUespdQQ01"
+            className="inline-block bg-navy text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition"
+          >
+            Enroll / Request Group →
+          </a>
+        </div>
+
+        {/* Government Executive Leadership Academy */}
+        <div className="bg-gray-50 shadow-md rounded-xl p-6">
+          <h2 className="text-2xl font-semibold text-navy mb-2">
+            Government Executive Leadership Academy
+          </h2>
+          <p className="text-gray-700 mb-3">Custom cohort</p>
+          <p className="text-gray-600 mb-4">
+            Tailored executive development programs for public sector leaders and managers.
+          </p>
+          <a
+            href="#contact"
+            className="inline-block bg-navy text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition"
+          >
+            Enroll / Request Group →
+          </a>
+        </div>
+      </div>
+
+      {/* YouTube Video Section */}
+      <div className="w-full max-w-4xl mt-16">
+        <h2 className="text-2xl font-semibold text-navy mb-4 text-center">
+          Watch Our Introduction
+        </h2>
+        <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-md">
+          <iframe
+            src="https://www.youtube.com/embed/DV0udP6GFFU?si=nNOWqchD2Ch13iE3"
+            title="Foreleads Leadership Consulting Introduction Video"
+            className="absolute top-0 left-0 w-full h-full rounded-xl"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default Programs;
