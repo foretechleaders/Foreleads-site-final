@@ -1,0 +1,15 @@
+# Netlify build configuration for Foreleads Leadership Consulting LLC
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+  base = "."
+
+[build.environment]
+  NODE_VERSION = "18.16.0"
+
+# Redirect all routes to index.html for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
