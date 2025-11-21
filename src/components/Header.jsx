@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import NavyLogo from "../assets/foreleads_logo_navy.svg"; // NEW SVG LOGO
+
+// ⭐ NEW — Wrapped SVG logo import
+import WrappedLogo from "../assets/foreleads_logo_wrapped.svg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +15,7 @@ const Header = () => {
         {/* Logo + Title */}
         <div className="flex items-center space-x-3">
           <img
-            src={NavyLogo}
+            src={WrappedLogo}
             alt="Foreleads Leadership Consulting Logo"
             className="h-10 w-auto"
           />
@@ -34,36 +36,16 @@ const Header = () => {
 
         {/* Desktop Social Icons */}
         <div className="hidden md:flex items-center space-x-4">
-          <a
-            href="https://www.linkedin.com/company/foreleads-leadership-consulting-llc/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
+          <a href="https://www.linkedin.com/company/foreleads-leadership-consulting-llc/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin text-gray-700 hover:text-blue-700 text-xl"></i>
           </a>
-          <a
-            href="https://www.instagram.com/foreleads_leadership/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
+          <a href="https://www.instagram.com/foreleads_leadership/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram text-gray-700 hover:text-pink-600 text-xl"></i>
           </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61582426252186"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-          >
+          <a href="https://www.facebook.com/profile.php?id=61582426252186" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-facebook text-gray-700 hover:text-blue-600 text-xl"></i>
           </a>
-          <a
-            href="https://www.youtube.com/@ForeleadsLeadershipConsulting"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-          >
+          <a href="https://www.youtube.com/@ForeleadsLeadershipConsulting" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-youtube text-gray-700 hover:text-red-600 text-xl"></i>
           </a>
         </div>
@@ -72,7 +54,6 @@ const Header = () => {
         <button
           className="md:hidden text-gray-700 text-2xl focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle Menu"
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -81,19 +62,27 @@ const Header = () => {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 shadow-lg py-4 text-center">
-          <Link to="/" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 font-medium hover:text-blue-700">Home</Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 font-medium hover:text-blue-700">About</Link>
-          <Link to="/services" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 font-medium hover:text-blue-700">Services</Link>
-          <Link to="/programs" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 font-medium hover:text-blue-700">Programs</Link>
-          <Link to="/resources" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 font-medium hover:text-blue-700">Resources</Link>
-          <Link to="/contact" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 font-medium hover:text-blue-700">Contact</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 hover:text-blue-700">Home</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 hover:text-blue-700">About</Link>
+          <Link to="/services" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 hover:text-blue-700">Services</Link>
+          <Link to="/programs" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 hover:text-blue-700">Programs</Link>
+          <Link to="/resources" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 hover:text-blue-700">Resources</Link>
+          <Link to="/contact" onClick={() => setMenuOpen(false)} className="block py-2 text-gray-800 hover:text-blue-700">Contact</Link>
 
-          {/* Mobile Social Icons */}
+          {/* Mobile Social */}
           <div className="flex justify-center space-x-5 mt-4">
-            <a href="https://www.linkedin.com/company/foreleads-leadership-consulting-llc/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin text-gray-700 hover:text-blue-700 text-xl"></i></a>
-            <a href="https://www.instagram.com/foreleads_leadership/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram text-gray-700 hover:text-pink-600 text-xl"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61582426252186" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook text-gray-700 hover:text-blue-600 text-xl"></i></a>
-            <a href="https://www.youtube.com/@ForeleadsLeadershipConsulting" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube text-gray-700 hover:text-red-600 text-xl"></i></a>
+            <a href="https://www.linkedin.com/company/foreleads-leadership-consulting-llc/" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin text-gray-700 hover:text-blue-700 text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/foreleads_leadership/" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram text-gray-700 hover:text-pink-600 text-xl"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61582426252186" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-facebook text-gray-700 hover:text-blue-600 text-xl"></i>
+            </a>
+            <a href="https://www.youtube.com/@ForeleadsLeadershipConsulting" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-youtube text-gray-700 hover:text-red-600 text-xl"></i>
+            </a>
           </div>
         </div>
       )}
