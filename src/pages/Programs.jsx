@@ -11,6 +11,7 @@ const Programs = () => {
 
       {/* Program List */}
       <div className="max-w-4xl space-y-10">
+        
         {/* Leading Through Transformation */}
         <div className="bg-gray-50 shadow-md rounded-xl p-6">
           <h2 className="text-2xl font-semibold text-navy mb-2">
@@ -37,8 +38,10 @@ const Programs = () => {
           <p className="text-gray-600 mb-4">
             Strengthen technical leaders’ ability to influence, communicate, and deliver strategic outcomes.
           </p>
+
+          {/* ⭐ CHANGE MADE HERE — now links to your standalone page */}
           <a
-            href="https://buy.stripe.com/cNi4gB4Vx31Wcu25VTdQQ04"
+            href="/it-leadership-edge"
             className="inline-block bg-navy text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition"
           >
             Enroll / Request Group →
