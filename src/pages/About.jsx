@@ -3,7 +3,6 @@ import React from "react";
 const About = () => {
   return (
     <div className="bg-white text-gray-800 pt-24 pb-20">
-
       {/* PAGE CONTAINER */}
       <div className="container mx-auto px-6 md:px-12">
 
@@ -15,7 +14,7 @@ const About = () => {
         {/* IMAGE CENTERED */}
         <div className="flex justify-center mb-10">
           <img
-            src="/ProfilePic.jpg"  // <-- Make sure this file exists in /public
+            src="/ProfilePic.jpg"
             alt="Dr. Anthony Foreman"
             className="w-64 h-64 object-cover rounded-full shadow-xl border-4 border-gray-200 mx-auto"
           />
@@ -23,7 +22,6 @@ const About = () => {
 
         {/* CONTENT GRID */}
         <div className="grid md:grid-cols-2 gap-12">
-
           {/* LEFT COLUMN */}
           <div>
             <h2 className="text-2xl font-semibold text-navy mb-4">
@@ -34,8 +32,8 @@ const About = () => {
               Dr. Anthony T. Foreman is a seasoned IT executive and leadership strategist
               with over 25 years of experience serving in high-profile, mission-critical
               federal technology environments. His leadership journey includes roles at
-              the <strong>White House</strong>, the <strong>Library of Congress</strong>, 
-              the <strong>Securities & Exchange Commission</strong>, the <strong>U.S. Marshals Service</strong>, 
+              the <strong>White House</strong>, the <strong>Library of Congress</strong>,
+              the <strong>Securities & Exchange Commission</strong>, the <strong>U.S. Marshals Service</strong>,
               and others.
             </p>
 
@@ -82,4 +80,18 @@ const About = () => {
         </div>
 
         {/* CLOSING SECTION */}
-        <div classNam
+        <div className="mt-16 text-center max-w-3xl mx-auto">
+          <h2 className="text-2xl font-semibold text-navy mb-4">Driven by Purpose</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Dr. Foreman’s mission is to elevate leaders with the clarity, confidence,
+            and strategic insight needed to thrive in today’s rapidly evolving technical
+            and organizational landscapes.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default About;
