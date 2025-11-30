@@ -33,8 +33,8 @@ const About = () => {
               with over 25 years of experience serving in high-profile, mission-critical
               federal technology environments. His leadership journey includes roles at
               the <strong>White House</strong>, the <strong>Library of Congress</strong>,
-              the <strong>Securities & Exchange Commission</strong>, the <strong>U.S. Marshals Service</strong>,
-              and others.
+              the <strong>Securities & Exchange Commission</strong>,
+              the <strong>U.S. Marshals Service</strong>, and others.
             </p>
 
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -56,25 +56,30 @@ const About = () => {
             <h2 className="text-2xl font-semibold text-navy mb-4">Professional Background</h2>
 
             <ul className="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
+
               <li>
-                Former Deputy Chief of IT Operations & Infrastructure at the <strong>White House</strong>
-                during the Obama Administration.
+                <strong>Former Deputy Chief of IT Operations & Infrastructure at the White House, supporting mission-critical technology operations during the Obama Administration.</strong>
               </li>
+
               <li>
                 Current <strong>Data Center Management Division Chief</strong> at the Library of Congress,
                 overseeing enterprise infrastructure and modernization.
               </li>
+
               <li>
                 Expertise in network engineering, cybersecurity, federal IT operations,
                 and enterprise leadership.
               </li>
+
               <li>
                 Doctorate in Organizational Leadership, Master’s in Information Systems Engineering,
                 Bachelor’s in Computer Information Systems.
               </li>
+
               <li>
                 Member of <strong>Golden Key Honor Society</strong> and <strong>IEEE Computer Society</strong>.
               </li>
+
             </ul>
           </div>
         </div>
