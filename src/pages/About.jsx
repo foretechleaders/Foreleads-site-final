@@ -1,42 +1,85 @@
-import React from 'react'
+import React from "react";
 
-export default function About() {
+const About = () => {
   return (
-    <section className="container py-12">
-      <h1 className="text-3xl font-bold text-navy mb-6">
-        Leadership Rooted in Integrity, Excellence, and Growth.
-      </h1>
+    <div className="bg-white text-gray-800 pt-24 pb-20">
 
-      <div className="grid md:grid-cols-2 gap-10 items-center">
-        {/* Left Column: Circular Profile Picture */}
-        <div className="flex justify-center">
+      {/* PAGE CONTAINER */}
+      <div className="container mx-auto px-6 md:px-12">
+
+        {/* TITLE */}
+        <h1 className="text-4xl font-bold text-navy mb-6 text-center">
+          About Dr. Anthony T. Foreman
+        </h1>
+
+        {/* IMAGE CENTERED */}
+        <div className="flex justify-center mb-10">
           <img
-            src="/Profile Pic.JPG"
+            src="/ProfilePic.jpg"  // <-- Make sure this file exists in /public
             alt="Dr. Anthony Foreman"
-            className="w-72 h-72 object-cover rounded-full shadow-lg border-4 border-slate-100"
+            className="w-64 h-64 object-cover rounded-full shadow-xl border-4 border-gray-200 mx-auto"
           />
         </div>
 
-        {/* Right Column: Biography and Values */}
-        <div className="text-slate-700 leading-relaxed space-y-4">
-          <p>
-            Dr. Anthony Foreman is a seasoned IT and organizational leadership professional with over 25 years
-            of experience leading mission-critical operations in the Federal Government. His leadership journey
-            spans the White House, U.S. Marshals Service, and Library of Congress.
-          </p>
-          <p>
-            As the Founder and Principal Consultant of Foreleads Leadership Consulting LLC, Dr. Foreman applies
-            his doctorate in Organizational Leadership to help clients drive cultural transformation, improve
-            performance, and cultivate the next generation of leaders.
-          </p>
-          <blockquote className="border-l-4 border-navy pl-4 italic text-slate-600">
-            “Leadership is not about position—it’s about purpose, people, and progress.”
-          </blockquote>
-          <p className="font-medium text-slate-800">
-            Core Values: Integrity • Excellence • Responsibility • Service • Growth
-          </p>
+        {/* CONTENT GRID */}
+        <div className="grid md:grid-cols-2 gap-12">
+
+          {/* LEFT COLUMN */}
+          <div>
+            <h2 className="text-2xl font-semibold text-navy mb-4">
+              Leadership. Service. Impact.
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Dr. Anthony T. Foreman is a seasoned IT executive and leadership strategist
+              with over 25 years of experience serving in high-profile, mission-critical
+              federal technology environments. His leadership journey includes roles at
+              the <strong>White House</strong>, the <strong>Library of Congress</strong>, 
+              the <strong>Securities & Exchange Commission</strong>, the <strong>U.S. Marshals Service</strong>, 
+              and others.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              With a doctorate in <strong>Organizational Leadership</strong> and a career
+              leading complex IT operations, Dr. Foreman has built a reputation for transforming
+              teams, strengthening executive communication, and building leaders who thrive in
+              complex technical environments.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Through Foreleads Leadership Consulting LLC, he empowers professionals, technical
+              leaders, and executives with the practical leadership tools required to communicate
+              with clarity, influence effectively, and deliver results under pressure.
+            </p>
+          </div>
+
+          {/* RIGHT COLUMN */}
+          <div>
+            <h2 className="text-2xl font-semibold text-navy mb-4">Professional Background</h2>
+
+            <ul className="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
+              <li>
+                Former Deputy Chief of IT Operations & Infrastructure at the <strong>White House</strong>
+                during the Obama Administration.
+              </li>
+              <li>
+                Current <strong>Data Center Management Division Chief</strong> at the Library of Congress,
+                overseeing enterprise infrastructure and modernization.
+              </li>
+              <li>
+                Expertise in network engineering, cybersecurity, federal IT operations,
+                and enterprise leadership.
+              </li>
+              <li>
+                Doctorate in Organizational Leadership, Master’s in Information Systems Engineering,
+                Bachelor’s in Computer Information Systems.
+              </li>
+              <li>
+                Member of <strong>Golden Key Honor Society</strong> and <strong>IEEE Computer Society</strong>.
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
-  )
-}
+
+        {/* CLOSING SECTION */}
+        <div classNam
