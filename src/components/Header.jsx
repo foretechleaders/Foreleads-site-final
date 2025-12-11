@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Logo from "../assets/foreleads_logo_white_outline.svg"; // use your preferred logo file
+import Logo from "../assets/foreleads_logo_white_outline.svg.png"; // use your preferred logo file
 
 const Header = () => {
   return (
