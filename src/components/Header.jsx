@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/foreleads_logo_white_outline.svg.png"; // if needed, update filename
 
 const Header = () => {
   return (
@@ -9,7 +8,11 @@ const Header = () => {
 
         {/* LOGO */}
         <Link to="/" className="flex items-center space-x-3">
-          <img src="/foreleads_logo.png" alt="Foreleads Logo" className="h-10 w-auto" />
+          <img
+            src="/foreleads_logo_wrapped.svg"
+            alt="Foreleads Logo"
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* NAVIGATION */}

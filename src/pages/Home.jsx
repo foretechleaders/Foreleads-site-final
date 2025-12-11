@@ -9,9 +9,9 @@ const Home = () => {
       <section className="relative w-full bg-navy text-white py-28 px-6 shadow-md">
         <div className="container mx-auto flex flex-col items-center text-center">
 
-          {/* BIGGER LOGO (only improvement kept) */}
+          {/* CORRECT LOGO */}
           <img
-            src="/foreleads_logo.png"
+            src="/foreleads_logo_wrapped.svg"
             alt="Foreleads Leadership Consulting Logo"
             className="h-40 w-auto mb-8"
             style={{ maxWidth: "420px" }}
