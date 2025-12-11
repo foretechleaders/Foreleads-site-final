@@ -1,42 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import Logo from "../assets/foreleads_logo_white_outline.svg.png"; // use your preferred logo file
-
 const Header = () => {
+  // Add scroll listener for shadow effect
+  useEffect(() => {
+    const header = document.getElementById("site-header");
+
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        header.classList.add("nav-solid");
+      } else {
+        header.classList.remove("nav-solid");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-navy text-white fixed top-0 left-0 right-0 shadow z-50">
+    <header
+      id="site-header"
+      className="fixed top-0 left-0 right-0 z-50 bg-navy text-white nav-shadow transition-all duration-300"
+    >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
 
-        {/* LOGO */}
+        {/* LOGO LEFT */}
         <Link to="/" className="flex items-center space-x-3">
-          <img src={Logo} alt="Foreleads Logo" className="h-10 w-auto" />
+          <img src="/foreleads_logo.png" alt="Logo" className="h-10 w-auto" />
         </Link>
 
         {/* NAVIGATION */}
-        <nav className="hidden md:flex space-x-8 text-lg">
-
-          <Link to="/" className="hover:text-blue-300">
-            Home
-          </Link>
-
-          <Link to="/about" className="hover:text-blue-300">
-            About
-          </Link>
-
-          <Link to="/programs" className="hover:text-blue-300">
-            Programs
-          </Link>
-
-          {/* ⭐ NEW ARTICLES LINK */}
-          <Link to="/leadership-articles" className="hover:text-blue-300">
-            Articles
-          </Link>
-
-          <Link to="/contact" className="hover:text-blue-300">
-            Contact
-          </Link>
+        <nav className="hidden md:flex space-x-10 text-lg font-medium">
+          <Link className="nav-link" to="/">Home</Link>
+          <Link className="nav-link" to="/about">About</Link>
+          <Link className="nav-link" to="/programs">Programs</Link>
+          <Link className="nav-link" to="/leadership-articles">Articles</Link>
+          <Link className="nav-link" to="/contact">Contact</Link>
         </nav>
+
       </div>
     </header>
   );
