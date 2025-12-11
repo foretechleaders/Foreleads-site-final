@@ -1,31 +1,28 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+export default function Header() {
   return (
-    <header className="bg-navy text-white fixed top-0 left-0 right-0 shadow z-50">
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-
+    <header className="bg-[#18345e] shadow-md">
+      <div className="container mx-auto flex items-center justify-between py-4 px-6">
+        
         {/* LOGO */}
-        <Link to="/" className="flex items-center space-x-3">
+        <Link to="/" className="flex items-center gap-2">
           <img
-            src="/foreleads_logo_wrapped.svg"
+            src="/foreleads_logo.png"
             alt="Foreleads Logo"
             className="h-10 w-auto"
           />
         </Link>
 
         {/* NAVIGATION */}
-        <nav className="hidden md:flex space-x-8 text-lg">
-          <Link to="/" className="hover:text-blue-300">Home</Link>
-          <Link to="/about" className="hover:text-blue-300">About</Link>
-          <Link to="/programs" className="hover:text-blue-300">Programs</Link>
-          <Link to="/leadership-articles" className="hover:text-blue-300">Articles</Link>
-          <Link to="/contact" className="hover:text-blue-300">Contact</Link>
+        <nav className="flex gap-6 text-white font-medium">
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/programs">Programs</Link>
+          <Link to="/leadership-articles">Articles</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
       </div>
     </header>
   );
-};
-
-export default Header;
+}
