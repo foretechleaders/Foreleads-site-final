@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/foreleads_logo_white_outline.svg.png"; // <-- update if your file is named differently
+import Logo from "../assets/foreleads_logo_white_outline.svg.png"; // FIXED PATH
 
 const Home = () => {
   return (
@@ -13,9 +13,10 @@ const Home = () => {
         <div className="flex justify-center items-center space-x-4 mb-6">
           <img
             src={Logo}
-            alt="Foreleads Logo"
-            className="h-14 w-auto"
+            alt="Foreleads Leadership Logo"
+            className="h-14 w-auto object-contain"
           />
+
           <h1 className="text-4xl md:text-5xl font-bold text-navy">
             Foreleads Leadership Consulting LLC
           </h1>
@@ -96,7 +97,7 @@ const Home = () => {
 
         <div className="bg-white border border-gray-300 rounded-xl shadow-md p-6 flex flex-col items-center w-full max-w-md">
           <a
-            href="https://www.thed9network.com/united-states/virginia-beach/professional-services/foreleads-leadership-consulting-llc?from=badge"
+            href="https://www.thed9network.com/united-states/virginia-beach/professional-services/foreleadsleadership-consulting-llc?from=badge"
             title="Find me on The D9Network"
             target="_blank"
             rel="noopener noreferrer"
