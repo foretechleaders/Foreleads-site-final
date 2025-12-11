@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../assets/foreleads_logo_white_outline.svg.png"; // <-- update if your file is named differently
 
 const Home = () => {
   return (
@@ -7,9 +8,19 @@ const Home = () => {
 
       {/* HERO SECTION */}
       <section className="container mx-auto px-6 pb-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-navy mb-4">
-          Foreleads Leadership Consulting LLC
-        </h1>
+
+        {/* LOGO + TITLE */}
+        <div className="flex justify-center items-center space-x-4 mb-6">
+          <img
+            src={Logo}
+            alt="Foreleads Logo"
+            className="h-14 w-auto"
+          />
+          <h1 className="text-4xl md:text-5xl font-bold text-navy">
+            Foreleads Leadership Consulting LLC
+          </h1>
+        </div>
+
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
           Helping leaders communicate with clarity, influence with purpose, and
           make decisions that drive mission-critical outcomes.
@@ -77,7 +88,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ⭐ PRO NETWORK BADGE SECTION (ENHANCED) */}
+      {/* AFFILIATION BADGE SECTION */}
       <section className="mt-20 mb-16 flex flex-col items-center px-6">
         <h2 className="text-2xl font-semibold text-navy mb-6 text-center">
           Professional Networks & Affiliations
