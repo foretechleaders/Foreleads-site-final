@@ -1,38 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/foreleads_logo_white_outline.svg.png"; // FIXED PATH
 
 const Home = () => {
   return (
     <div className="bg-white text-gray-800 pt-24">
 
-      {/* HERO SECTION */}
-      <section className="container mx-auto px-6 pb-20 text-center">
+      {/* PREMIUM HERO BANNER */}
+      <section className="relative w-full bg-navy text-white py-28 px-6 shadow-md">
+        <div className="container mx-auto flex flex-col items-center text-center">
 
-        {/* LOGO + TITLE */}
-        <div className="flex justify-center items-center space-x-4 mb-6">
+          {/* LOGO AS TITLE */}
           <img
-            src={Logo}
-            alt="Foreleads Leadership Logo"
-            className="h-14 w-auto object-contain"
+            src="/foreleads_logo.png"
+            alt="Foreleads Leadership Consulting Logo"
+            className="h-28 w-auto mb-6 drop-shadow-lg"
           />
 
-          <h1 className="text-4xl md:text-5xl font-bold text-navy">
-            Foreleads Leadership Consulting LLC
-          </h1>
+          {/* EXECUTIVE TAGLINE */}
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl leading-relaxed mb-8">
+            Empowering leaders with clarity, influence, and execution in mission-critical environments.
+          </p>
+
+          {/* CTA BUTTON */}
+          <Link
+            to="/programs"
+            className="bg-white text-navy font-semibold px-10 py-3 rounded-lg text-lg shadow-md hover:bg-gray-200 transition"
+          >
+            Explore Programs
+          </Link>
         </div>
-
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          Helping leaders communicate with clarity, influence with purpose, and
-          make decisions that drive mission-critical outcomes.
-        </p>
-
-        <Link
-          to="/programs"
-          className="inline-block bg-navy text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-900 transition shadow-md"
-        >
-          Explore Programs
-        </Link>
       </section>
 
       {/* SERVICES SECTION */}
@@ -42,50 +38,40 @@ const Home = () => {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
+
+          {/* Leadership Workshops */}
           <div className="bg-gray-50 rounded-xl shadow p-6 text-center">
-            <h3 className="text-xl font-semibold text-navy mb-2">
-              Leadership Workshops
-            </h3>
+            <h3 className="text-xl font-semibold text-navy mb-2">Leadership Workshops</h3>
             <p className="text-gray-600 mb-4">
               Highly practical sessions designed for technical and emerging leaders.
             </p>
-            <Link
-              to="/programs"
-              className="text-navy font-semibold hover:underline"
-            >
+            <Link to="/programs" className="text-navy font-semibold hover:underline">
               Learn more →
             </Link>
           </div>
 
+          {/* Cohort-Based Programs */}
           <div className="bg-gray-50 rounded-xl shadow p-6 text-center">
-            <h3 className="text-xl font-semibold text-navy mb-2">
-              Cohort-Based Programs
-            </h3>
+            <h3 className="text-xl font-semibold text-navy mb-2">Cohort-Based Programs</h3>
             <p className="text-gray-600 mb-4">
               Deep-dive leadership intensives for transformation and growth.
             </p>
-            <Link
-              to="/programs"
-              className="text-navy font-semibold hover:underline"
-            >
+            <Link to="/programs" className="text-navy font-semibold hover:underline">
               Learn more →
             </Link>
           </div>
 
+          {/* Executive Coaching */}
           <div className="bg-gray-50 rounded-xl shadow p-6 text-center">
-            <h3 className="text-xl font-semibold text-navy mb-2">
-              Executive Coaching
-            </h3>
+            <h3 className="text-xl font-semibold text-navy mb-2">Executive Coaching</h3>
             <p className="text-gray-600 mb-4">
               Personalized leadership development for senior and emerging leaders.
             </p>
-            <Link
-              to="/contact"
-              className="text-navy font-semibold hover:underline"
-            >
+            <Link to="/contact" className="text-navy font-semibold hover:underline">
               Contact us →
             </Link>
           </div>
+
         </div>
       </section>
 
@@ -96,9 +82,9 @@ const Home = () => {
         </h2>
 
         <div className="bg-white border border-gray-300 rounded-xl shadow-md p-6 flex flex-col items-center w-full max-w-md">
+
           <a
-            href="https://www.thed9network.com/united-states/virginia-beach/professional-services/foreleadsleadership-consulting-llc?from=badge"
-            title="Find me on The D9Network"
+            href="https://www.thed9network.com/united-states/virginia-beach/professional-services/foreleads-leadership-consulting-llc?from=badge"
             target="_blank"
             rel="noopener noreferrer"
             className="transform transition hover:scale-105"
