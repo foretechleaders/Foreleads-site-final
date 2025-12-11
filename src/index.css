@@ -1,4 +1,9 @@
-/* BASIC GLOBAL STYLES */
+/* REQUIRED: Load Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Optional Global Styles Below --- */
 
 body {
   margin: 0;
@@ -8,22 +13,14 @@ body {
   color: #1a1a1a;
 }
 
-/* Improve text rendering */
-body,
-button,
-input,
-textarea {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/* Basic smooth transitions */
-a,
-button {
-  transition: all 0.2s ease;
-}
-
-/* Shadow helpers */
-.shadow {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+/* Restore container width (optional) */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }

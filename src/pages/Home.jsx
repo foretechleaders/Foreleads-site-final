@@ -5,11 +5,11 @@ const Home = () => {
   return (
     <div className="bg-white text-gray-800 pt-24">
 
-      {/* SIMPLE HERO SECTION */}
+      {/* HERO SECTION */}
       <section className="relative w-full bg-navy text-white py-28 px-6 shadow-md">
         <div className="container mx-auto flex flex-col items-center text-center">
 
-          {/* CORRECT LOGO */}
+          {/* FIXED LOGO PATH */}
           <img
             src="/foreleads_logo_wrapped.svg"
             alt="Foreleads Leadership Consulting Logo"
@@ -45,10 +45,7 @@ const Home = () => {
             <p className="text-gray-600 mb-4">
               Highly practical sessions designed for technical and emerging leaders.
             </p>
-            <Link
-              to="/programs"
-              className="text-navy font-semibold hover:underline"
-            >
+            <Link to="/programs" className="text-navy font-semibold hover:underline">
               Learn more →
             </Link>
           </div>
@@ -58,10 +55,7 @@ const Home = () => {
             <p className="text-gray-600 mb-4">
               Deep-dive leadership intensives for transformation and growth.
             </p>
-            <Link
-              to="/programs"
-              className="text-navy font-semibold hover:underline"
-            >
+            <Link to="/programs" className="text-navy font-semibold hover:underline">
               Learn more →
             </Link>
           </div>
@@ -71,10 +65,7 @@ const Home = () => {
             <p className="text-gray-600 mb-4">
               Personalized leadership development for senior and emerging leaders.
             </p>
-            <Link
-              to="/contact"
-              className="text-navy font-semibold hover:underline"
-            >
+            <Link to="/contact" className="text-navy font-semibold hover:underline">
               Contact us →
             </Link>
           </div>
@@ -82,7 +73,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* AFFILIATION BADGE */}
+      {/* AFFILIATION SECTION */}
       <section className="mt-20 mb-16 flex flex-col items-center px-6">
         <h2 className="text-2xl font-semibold text-navy mb-6 text-center">
           Professional Networks & Affiliations
