@@ -87,15 +87,22 @@ const About = () => {
           </div>
         </div>
 
-        {/* CLOSING STATEMENT */}
-        <div className="text-center mt-16">
-          <h2 className="text-2xl font-semibold text-navy mb-2">Driven by Purpose</h2>
-          <p className="text-gray-700 max-w-2xl mx-auto">
-            Dr. Foreman’s mission is to elevate leaders with the clarity, confidence, 
-            and strategic insight needed to thrive in today’s rapidly evolving technical 
-            and organizational landscapes.
-          </p>
-        </div>
+        <section className="mt-16 bg-[#f1f5f7] border-l-4 border-[#b7a06c] p-6 md:p-10 rounded-r-lg" aria-labelledby="leadership-philosophy">
+          <h2 id="leadership-philosophy" className="font-serif text-3xl text-[#102c48] mb-6">Personal Values and Leadership Philosophy</h2>
+          <div className="space-y-4 text-gray-700 leading-relaxed">
+            <p>Dr. Foreman's leadership approach reflects the intersection of military discipline, executive experience, academic achievement, and community service.</p>
+            <p>He emphasizes servant leadership, professional integrity, mentorship, accountability, strategic thinking, and the importance of developing people while delivering measurable organizational results.</p>
+            <p>His career demonstrates a commitment to connecting technology with organizational strategy and helping individuals and institutions achieve sustainable success.</p>
+          </div>
+        </section>
+        <section className="mt-12 max-w-4xl mx-auto" aria-labelledby="overall-summary">
+          <h2 id="overall-summary" className="font-serif text-3xl text-[#102c48] mb-6">Overall Summary</h2>
+          <div className="space-y-5 text-gray-700 leading-relaxed">
+            <p>Dr. Anthony T. Foreman represents a blend of military service, federal executive leadership, academic achievement, entrepreneurship, and civic engagement. From serving his country aboard U.S. Navy warships to managing mission-critical technology operations for nationally significant institutions, his professional journey reflects decades of public service and leadership.</p>
+            <p>Today, he continues to contribute through his executive responsibilities at the Library of Congress, the development of Foreleads Leadership Consulting LLC, and his leadership of Alpha Phi Alpha Fraternity's Epsilon Nu Lambda Chapter.</p>
+            <p className="border-t border-gray-200 pt-6 font-serif text-2xl text-[#102c48]">His professional legacy centers on three principles: leading with purpose, transforming organizations, and developing the next generation of leaders.</p>
+          </div>
+        </section>
 
       </div>
     </div>
