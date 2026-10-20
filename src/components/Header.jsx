@@ -6,7 +6,8 @@ export default function Header() {
       <div className="container mx-auto flex flex-wrap items-center justify-between gap-5 py-5 px-6">
         
         {/* LOGO */}
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-3" aria-label="Foreleads Leadership Consulting LLC home">
+          <img src="/foreleads-gold-mark-v1.png" alt="" aria-hidden="true" width="56" height="56" className="h-14 w-14 shrink-0 object-contain" />
           <span className="tracking-[0.15em] font-semibold text-lg">FORELEADS<span className="block text-[10px] tracking-[0.15em] font-normal">LEADERSHIP CONSULTING LLC</span></span>
         </Link>
 
