@@ -33,17 +33,17 @@ const NewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-white text-center py-12">
-      <h2 className="text-3xl font-semibold text-navy mb-2">
+    <section className="bg-black text-center py-12">
+      <h2 className="text-3xl font-semibold text-white mb-2">
         The Leadership Edge Digest
       </h2>
-      <p className="text-gray-600 mb-6">
+      <p className="text-white mb-6">
         Quarterly insights and tools for leadership excellence.
       </p>
 
       <form
         onSubmit={handleSubmit}
-        className="max-w-md mx-auto bg-gray-50 p-6 rounded-2xl shadow"
+        className="max-w-md mx-auto bg-black p-6 rounded-2xl shadow"
       >
         <input
           type="email"
@@ -51,40 +51,40 @@ const NewsletterSignup = () => {
           placeholder="Email Address *"
           required
           onChange={handleChange}
-          className="w-full mb-3 px-3 py-2 border border-gray-300 rounded"
+          className="w-full mb-3 px-3 py-2 border border-[#CFB53B]/40 rounded"
         />
         <input
           type="text"
           name="FNAME"
           placeholder="First Name"
           onChange={handleChange}
-          className="w-full mb-3 px-3 py-2 border border-gray-300 rounded"
+          className="w-full mb-3 px-3 py-2 border border-[#CFB53B]/40 rounded"
         />
         <input
           type="text"
           name="LNAME"
           placeholder="Last Name"
           onChange={handleChange}
-          className="w-full mb-3 px-3 py-2 border border-gray-300 rounded"
+          className="w-full mb-3 px-3 py-2 border border-[#CFB53B]/40 rounded"
         />
         <input
           type="text"
           name="COMPANY"
           placeholder="Company"
           onChange={handleChange}
-          className="w-full mb-3 px-3 py-2 border border-gray-300 rounded"
+          className="w-full mb-3 px-3 py-2 border border-[#CFB53B]/40 rounded"
         />
         <input
           type="text"
           name="MMERGE5"
           placeholder="Company URL"
           onChange={handleChange}
-          className="w-full mb-4 px-3 py-2 border border-gray-300 rounded"
+          className="w-full mb-4 px-3 py-2 border border-[#CFB53B]/40 rounded"
         />
 
         <button
           type="submit"
-          className="bg-navy text-white font-semibold px-6 py-2 rounded hover:bg-blue-900 transition"
+          className="bg-black text-white font-semibold px-6 py-2 rounded hover:bg-[#19170f] transition"
         >
           Subscribe
         </button>
@@ -93,7 +93,7 @@ const NewsletterSignup = () => {
       {status && (
         <p
           className={`mt-4 text-sm font-medium ${
-            status.includes("✅") ? "text-green-600" : "text-red-600"
+            status.includes("✅") ? "text-white" : "text-white"
           }`}
         >
           {status}

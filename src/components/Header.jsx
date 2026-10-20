@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="bg-white text-[#102c48] border-b border-gray-200">
+    <header className="bg-black text-white border-b border-[#CFB53B]/40">
       <div className="container mx-auto flex flex-wrap items-center justify-between gap-5 py-5 px-6">
         
         {/* LOGO */}
