@@ -1,7 +1,8 @@
 # Netlify build configuration for Foreleads Leadership Consulting LLC
 
 [build]
-  command = "npm run build"
+  # Replace checked-in node_modules with dependencies for the build platform.
+  command = "npm ci --include=dev && npm run build"
   publish = "dist"
   base = "."
 
