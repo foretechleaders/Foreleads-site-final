@@ -45,7 +45,7 @@ const Programs = () => {
           <h2 className="text-2xl font-semibold text-white mb-2">
             The IT Leadership Edge
           </h2>
-          <p className="text-white mb-3">4-week intensive</p>
+          <p className="text-white mb-3">Monthly Webinar</p>
           <p className="text-white mb-4">
             Strengthen technical leaders’ ability to influence, communicate, and deliver strategic outcomes.
           </p>
