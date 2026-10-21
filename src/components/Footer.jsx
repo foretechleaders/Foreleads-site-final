@@ -48,6 +48,9 @@ const Footer = () => {
               className="h-20 w-auto"
             />
           </a>
+          <a href="https://www.isaca.org/membership" target="_blank" rel="noopener noreferrer" aria-label="ISACA membership" className="mt-5 inline-flex items-center justify-center min-h-11">
+            <img src="/isaca-logo.svg" alt="ISACA" width="120" height="30" loading="lazy" className="w-[120px] h-auto max-w-full object-contain" />
+          </a>
         </div>
 
         {/* TAGLINE */}

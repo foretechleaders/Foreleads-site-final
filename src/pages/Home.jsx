@@ -47,9 +47,8 @@ export default function Home() {
         <h2 className="text-xl font-semibold text-white mb-4">Professional Networks & Affiliations</h2>
         <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 mt-8">
           <a href="https://www.thed9network.com/united-states/virginia-beach/professional-services/foreleads-leadership-consulting-llc?from=badge" className="text-white underline underline-offset-4">Proud Member of The D9 Network</a>
-          <a href="https://www.isaca.org/membership" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-4 text-white hover:underline underline-offset-4">
-            <img src="/isaca-logo.svg" alt="ISACA" width="205" height="50" loading="lazy" className="w-52 max-w-full h-auto object-contain" />
-            <span>ISACA Professional Member</span>
+          <a href="https://www.isaca.org/membership" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-4">
+            <span>ISACA professional Member</span>
           </a>
         </div>
       </section>
