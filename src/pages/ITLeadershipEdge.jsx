@@ -2,7 +2,7 @@ import React from "react";
 import WrappedLogo from "../assets/foreleads_logo_wrapped.svg";
 
 const ITLeadershipEdge = () => {
-  const stripeUrl = "https://buy.stripe.com/bJe5kF3Rt6e88dM0BzdQQ06";
+  const stripeUrl = "https://buy.stripe.com/5kQ00l5ZB1XS79I3NLdQQ07";
 
   return (
     <div className="bg-black text-white min-h-screen">
