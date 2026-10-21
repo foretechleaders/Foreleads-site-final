@@ -45,11 +45,11 @@ const ITLeadershipEdge = () => {
                 </p>
 
                 <p className="text-sm sm:text-base text-white mb-4">
-                  <strong>Wednesday, December 17, 2025</strong> · 7:00 PM – 8:15 PM ET · $25
+                  <strong>Friday, November 20, 2026</strong> · 10:00 AM – 11:30 AM ET · $15
                 </p>
 
                 <p className="text-white mb-6">
-                  A focused 75-minute session for IT professionals who want to
+                  A focused Hour and a half session for IT professionals who want to
                   strengthen communication, leadership presence, and decision-making.
                 </p>
 
@@ -60,7 +60,7 @@ const ITLeadershipEdge = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-black hover:bg-[#19170f] text-lg font-semibold shadow-lg shadow-blue-900/40 transition"
                   >
-                    Register Now – $25
+                    Register Now – $15
                   </a>
                   <p className="text-xs sm:text-sm text-white">
                     Secure checkout via Stripe. Zoom link emailed immediately.
@@ -90,7 +90,7 @@ const ITLeadershipEdge = () => {
 
                   <h3 className="text-sm font-semibold text-white mb-1">Format</h3>
                   <p className="text-sm text-white">
-                    • 75 minutes on Zoom<br/>
+                    • 90 minutes on Zoom<br/>
                     • Interactive format<br/>
                     • Practical leadership tools from high-stakes environments
                   </p>
@@ -144,7 +144,7 @@ const ITLeadershipEdge = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-black hover:bg-[#19170f] text-lg font-semibold shadow-lg shadow-blue-900/40 transition"
               >
-                Register Now – $25
+                Register Now – $15
               </a>
             </section>
 
