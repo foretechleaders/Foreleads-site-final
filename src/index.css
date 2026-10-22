@@ -1,26 +1,45 @@
-/* REQUIRED: Load Tailwind layers */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* --- Optional Global Styles Below --- */
-
+:root {
+  color-scheme: dark;
+  --foreleads-gold: #CFB53B;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: #1a1a1a;
+  background-color: #000000;
+  color: #ffffff;
 }
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Restore container width (optional) */
+img { max-width: 100%; display: block; }
 .container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Shared brand palette for every page, including workshop and form states. */
+#root h1, #root h2, #root h3, #root h4, #root h5, #root h6 {
+  color: var(--foreleads-gold);
+}
+#root h1 *, #root h2 *, #root h3 * { color: inherit; }
+#root header > div > a:first-child { color: var(--foreleads-gold); }
+#root input, #root textarea, #root select {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: var(--foreleads-gold);
+}
+#root input::placeholder, #root textarea::placeholder {
+  color: #ffffff;
+  opacity: 0.75;
+}
+#root button, #root a[class*="bg-black"] {
+  border: 1px solid var(--foreleads-gold);
+}
+#root a:hover, #root button:hover { color: var(--foreleads-gold); }
+#root :focus-visible {
+  outline: 2px solid var(--foreleads-gold);
+  outline-offset: 4px;
 }
